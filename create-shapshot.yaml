@@ -1,0 +1,9 @@
+---
+schemaVersion: '2.2'
+description: Create Shanpshot for EBS volume.
+mainSteps:
+  - action: aws:runShellScript
+    name: createsnapshot
+    inputs:
+      runCommand:
+      - aws ec2 create-snapshot --volume-id vol-04cc162651d760bd7
